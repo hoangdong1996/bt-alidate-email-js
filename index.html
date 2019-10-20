@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tính hợp lệ email</title>
+</head>
+<body>
+<script>
+    function isEmail(str) {
+        let regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+
+    let email = 'a@gmail.com';
+    console.log(isEmail(email));
+    let email1 = 'a@hotmail.com';
+    console.log(isEmail(email1));
+    let email2 = '@gmail.com';
+    console.log(isEmail(email2));
+
+</script>
+</body>
+</html>
